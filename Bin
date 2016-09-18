@@ -1,0 +1,42 @@
+[Project]
+yeast
+
+[Genome_name]
+?E垫.M?O~L
+
+[Genome_Size] # eg. 3M or 3G
+3M
+
+[Primer]
+GATCGGAAGAGCACACGTCTGAACTCCAGTCAC,TACACTCTTTCCCTACACGACGCTCTTCCGATCT
+
+[Filter]
+PE250 PE250.1.fq.gz 250
+PE250 PE250.2.fq.gz 250
+PE500 solexa.1.fa.gz 500
+PE500 solexa.2.fa.gz 500
+MT2k  mate2k.1.fa.gz 2000 30 30
+MT2K  mate2k.2.fa.gz 2000 30 30
+MT5k  mate5k.1.fq.gz 5000 30 30
+MT5k  mate5k.2.fq.gz 5000 30 30
+
+[QC]
+PE250,PE500,MT2k,MT5k
+
+[Kmer]
+PE250,PE500
+
+[Discavor]
+PE250,PE500
+
+[SoapDenovo]
+PE250,PE500
+
+[SSPACE]
+MT2K
+
+[CloseGap]
+PE250,PE500
+
+[Evalue]
+PE500,MT2k  Discavor
